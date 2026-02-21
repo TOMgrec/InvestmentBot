@@ -1,0 +1,30 @@
+{
+  "tables": {
+    "stocks": {
+      "colonnes": {
+        "id": {"type": "serial", "nullable": false, "primary_key": true},
+        "code": {"type": "varchar(10)", "nullable": false, "unique": true},
+        "nom_entreprise": {"type": "varchar(255)", "nullable": false},
+        "secteur": {"type": "varchar(100)", "nullable": false},
+        "note": {"type": "decimal(3,2)", "nullable": true},
+        "description": {"type": "text", "nullable": true},
+        "cree_le": {"type": "timestamp", "nullable": false, "default": "CURRENT_TIMESTAMP"}
+      }
+    },
+    "tags": {
+      "colonnes": {
+        "id": {"type": "serial", "primary_key": true},
+        "nom": {"type": "varchar(50)", "nullable": false, "unique": true}
+      }
+    },
+    "stock_tags": {
+      "colonnes": {
+        "stock_id": {"type": "integer", "nullable": false, "references": "stocks(id)"},
+        "tag_id": {"type": "integer", "nullable": false, "references": "tags(id)"}
+      },
+      "contraintes": {
+        "primary_key": ["stock_id", "tag_id"]
+      }
+    }
+  }
+}
