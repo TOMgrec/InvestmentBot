@@ -1,0 +1,6 @@
+# Chainlit - Framework de chat UI
+chainlit>=2.6.2
+
+# Ollama et LangChain
+langchain>=0.1.0
+langchain_google_genai>=0.1.0
