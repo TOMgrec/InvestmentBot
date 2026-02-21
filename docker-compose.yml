@@ -1,0 +1,18 @@
+version: '3.8'
+
+services:
+  postgres:
+    image: postgres:16  # Version récente de PostgreSQL
+    container_name: postgres-server
+    environment:
+      POSTGRES_DB: finance
+      POSTGRES_USER: myuser
+      POSTGRES_PASSWORD: mypassword
+    ports:
+      - "5432:5432"  # Mappe le port 5432 de l'hôte au port 5432 du conteneur
+    volumes:
+      - postgres_data:/var/lib/postgresql/data  # Persistance des données
+    restart: unless-stopped
+
+volumes:
+  postgres_data:
