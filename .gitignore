@@ -6,3 +6,6 @@ __pycache__/
 *.pyd
 *.log
 *.bak
+.DS_Store
+.chainlit/
+.files/

@@ -12,7 +12,7 @@ def preprocess_query(query:str):
 @cl.on_chat_start
 async def start():
     # Connect to the LangServe chain
-    chain = RemoteRunnable("http://localhost:8001/rag/")
+    chain = RemoteRunnable("http://localhost:8001/sql/")
     cl.user_session.set("chain", chain)
 
     # Initialize history list
@@ -30,18 +30,23 @@ async def main(message: cl.Message):
     
     # Input dict for the remote chain
     input_dict = {
-        "question": content,
-        "history": cl.user_session.get("history"),
-        "actions": actions
+        "question": content
     }
 
     # Invoke the remote chain asynchronously
     msg = cl.Message(content="")
-    await msg.send()
+    #await msg.send()
 
     full_response = ""
 
     try:
+        chain_response = await chain.ainvoke(input_dict)
+        full_response = chain_response["answer"]
+    except Exception as e:
+        full_response = f"Erreur lors de l'appel au chain : {str(e)}"
+    await cl.Message(content=full_response).send()
+
+    """try:
         # Streaming via astream (plus fluide que astream_events pour du texte simple)
         async for chunk in chain.astream(input_dict):
             # chunk est une str (grâce à StrOutputParser)
@@ -51,7 +56,7 @@ async def main(message: cl.Message):
         await msg.send()  # Finalise le message après streaming complet
     
     except Exception as e:
-        await cl.ErrorMessage(content=f"Erreur lors du streaming : {str(e)}").send()
+        await cl.ErrorMessage(content=f"Erreur lors du streaming : {str(e)}").send()"""
     
     # Ajouter message utilisateur à l'historique
     history.append(HumanMessage(content=content))
