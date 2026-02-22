@@ -12,3 +12,4 @@ psycopg2-binary>=2.9.0
 
 # Others
 pandas>=2.0.0
+yfinance>=0.2.0
