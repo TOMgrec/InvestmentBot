@@ -1,10 +1,14 @@
 # Chainlit - Framework de chat UI
-chainlit>=2.6.2
+chainlit>=2.6.0
 
 # Ollama et LangChain
 langchain>=0.1.0
 langchain_google_genai>=0.1.0
+langchain_ollama>=0.1.0
 langserve>=0.1.0
 
 # Base de données PostgreSQL
 psycopg2-binary>=2.9.0
+
+# Others
+pandas>=2.0.0

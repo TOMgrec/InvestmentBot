@@ -1,38 +1,217 @@
 [
-    {"tag": "TECH", "description": "Entreprise spécialisée dans la technologie, le logiciel, le matériel informatique ou l'électronique"},
-    {"tag": "FIN", "description": "Institution financière, banque, assurance ou société de services financiers"},
-    {"tag": "SANTE", "description": "Entreprise du secteur de la santé, pharmaceutique, biotechnologique ou médical"},
-    {"tag": "CONSO", "description": "Société de biens de consommation courante ou discrétionnaire (alimentation, vêtements, etc.)"},
-    {"tag": "INDUS", "description": "Entreprise industrielle, manufacturière, d'ingénierie ou de machines"},
-    {"tag": "ENERG", "description": "Société du secteur de l'énergie (pétrole, gaz, énergies renouvelables, électricité)"},
-    {"tag": "UTIL", "description": "Fournisseur de services publics (eau, électricité, gaz, télécommunications)"},
-    {"tag": "IMMO", "description": "Entreprise immobilière, de gestion de biens ou de promotion immobilière"},
-    {"tag": "MAT", "description": "Société spécialisée dans les matériaux de construction, les matières premières ou la chimie"},
-    {"tag": "COM", "description": "Entreprise de communication, médias, divertissement ou réseaux sociaux"},
-    {"tag": "DIV", "description": "Société diversifiée, active dans plusieurs secteurs"},
-    {"tag": "ESG", "description": "Entreprise engagée dans des pratiques durables (Environnement, Social, Gouvernance)"},
-    {"tag": "INNO", "description": "Société reconnue pour son innovation, ses brevets ou sa R&D"},
-    {"tag": "GROW", "description": "Entreprise en forte croissance, expansion internationale ou émergente"},
-    {"tag": "STAB", "description": "Société stable avec des revenus récurrents et une faible volatilité"},
-    {"tag": "DIVID", "description": "Entreprise connue pour verser des dividendes réguliers et attractifs"},
-    {"tag": "LUXE", "description": "Marque ou entreprise du secteur du luxe (mode, joaillerie, cosmétiques, etc.)"},
-    {"tag": "RETAIL", "description": "Société de distribution, vente au détail ou e-commerce"},
-    {"tag": "AUTO", "description": "Constructeur automobile, équipementier ou mobilité"},
-    {"tag": "TRANS", "description": "Entreprise de transport, logistique ou infrastructure"},
-    {"tag": "AGRI", "description": "Société liée à l'agroalimentaire, l'agriculture ou l'élevage"},
-    {"tag": "TOUR", "description": "Entreprise du secteur du tourisme, hôtellerie ou loisirs"},
-    {"tag": "EDU", "description": "Société spécialisée dans l'éducation, la formation ou l'edtech"},
-    {"tag": "CYBER", "description": "Entreprise axée sur la cybersécurité, la protection des données ou l'intelligence artificielle"},
-    {"tag": "AERO", "description": "Société aéronautique, spatiale ou de défense"},
-    {"tag": "MIN", "description": "Entreprise minière ou spécialisée dans l'extraction de ressources"},
-    {"tag": "TELECOM", "description": "Opérateur ou fournisseur de services de télécommunications"},
-    {"tag": "B2B", "description": "Société orientée vers les services ou produits pour les entreprises"},
-    {"tag": "B2C", "description": "Société orientée vers les services ou produits pour les consommateurs finaux"},
-    {"tag": "STARTUP", "description": "Jeune entreprise innovante ou en phase de développement rapide"},
-    {"tag": "BLUECHIP", "description": "Grande entreprise réputée pour sa solidité financière et sa notoriété"},
-    {"tag": "FMCG", "description": "Société de biens de consommation à rotation rapide (Fast-Moving Consumer Goods)"},
-    {"tag": "AI", "description": "Entreprise spécialisée dans l'intelligence artificielle ou le machine learning"},
-    {"tag": "CLOUD", "description": "Société axée sur les services cloud, le stockage ou l'informatique dématérialisée"},
-    {"tag": "FINT", "description": "Entreprise de fintech (technologie financière, paiements, blockchain)"},
-    {"tag": "GREEN", "description": "Société engagée dans les énergies vertes ou la transition écologique"}
+    {
+        "tag": "TECH",
+        "description": "Entreprise sp\u00e9cialis\u00e9e dans la technologie, le logiciel, le mat\u00e9riel informatique ou l'\u00e9lectronique",
+        "special": 0
+    },
+    {
+        "tag": "FIN",
+        "description": "Institution financi\u00e8re, banque, assurance ou soci\u00e9t\u00e9 de services financiers",
+        "special": 0
+    },
+    {
+        "tag": "SANTE",
+        "description": "Entreprise du secteur de la sant\u00e9, pharmaceutique, biotechnologique ou m\u00e9dical",
+        "special": 0
+    },
+    {
+        "tag": "CONSO",
+        "description": "Soci\u00e9t\u00e9 de biens de consommation courante ou discr\u00e9tionnaire (alimentation, v\u00eatements, etc.)",
+        "special": 0
+    },
+    {
+        "tag": "INDUS",
+        "description": "Entreprise industrielle, manufacturi\u00e8re, d'ing\u00e9nierie ou de machines",
+        "special": 0
+    },
+    {
+        "tag": "ENERG",
+        "description": "Soci\u00e9t\u00e9 du secteur de l'\u00e9nergie (p\u00e9trole, gaz, \u00e9nergies renouvelables, \u00e9lectricit\u00e9)",
+        "special": 0
+    },
+    {
+        "tag": "UTIL",
+        "description": "Fournisseur de services publics (eau, \u00e9lectricit\u00e9, gaz, t\u00e9l\u00e9communications)",
+        "special": 0
+    },
+    {
+        "tag": "IMMO",
+        "description": "Entreprise immobili\u00e8re, de gestion de biens ou de promotion immobili\u00e8re",
+        "special": 0
+    },
+    {
+        "tag": "MAT",
+        "description": "Soci\u00e9t\u00e9 sp\u00e9cialis\u00e9e dans les mat\u00e9riaux de construction, les mati\u00e8res premi\u00e8res ou la chimie",
+        "special": 0
+    },
+    {
+        "tag": "COM",
+        "description": "Entreprise de communication, m\u00e9dias, divertissement ou r\u00e9seaux sociaux",
+        "special": 0
+    },
+    {
+        "tag": "DIV",
+        "description": "Soci\u00e9t\u00e9 diversifi\u00e9e, active dans plusieurs secteurs",
+        "special": 0
+    },
+    {
+        "tag": "ESG",
+        "description": "Entreprise engag\u00e9e dans des pratiques durables (Environnement, Social, Gouvernance)",
+        "special": 0
+    },
+    {
+        "tag": "INNO",
+        "description": "Soci\u00e9t\u00e9 reconnue pour son innovation, ses brevets ou sa R&D",
+        "special": 0
+    },
+    {
+        "tag": "GROW",
+        "description": "Entreprise en forte croissance, expansion internationale ou \u00e9mergente",
+        "special": 0
+    },
+    {
+        "tag": "STAB",
+        "description": "Soci\u00e9t\u00e9 stable avec des revenus r\u00e9currents et une faible volatilit\u00e9",
+        "special": 0
+    },
+    {
+        "tag": "DIVID",
+        "description": "Entreprise connue pour verser des dividendes r\u00e9guliers et attractifs",
+        "special": 0
+    },
+    {
+        "tag": "LUXE",
+        "description": "Marque ou entreprise du secteur du luxe (mode, joaillerie, cosm\u00e9tiques, etc.)",
+        "special": 0
+    },
+    {
+        "tag": "RETAIL",
+        "description": "Soci\u00e9t\u00e9 de distribution, vente au d\u00e9tail ou e-commerce",
+        "special": 0
+    },
+    {
+        "tag": "AUTO",
+        "description": "Constructeur automobile, \u00e9quipementier ou mobilit\u00e9",
+        "special": 0
+    },
+    {
+        "tag": "TRANS",
+        "description": "Entreprise de transport, logistique ou infrastructure",
+        "special": 0
+    },
+    {
+        "tag": "AGRI",
+        "description": "Soci\u00e9t\u00e9 li\u00e9e \u00e0 l'agroalimentaire, l'agriculture ou l'\u00e9levage",
+        "special": 0
+    },
+    {
+        "tag": "TOUR",
+        "description": "Entreprise du secteur du tourisme, h\u00f4tellerie ou loisirs",
+        "special": 0
+    },
+    {
+        "tag": "EDU",
+        "description": "Soci\u00e9t\u00e9 sp\u00e9cialis\u00e9e dans l'\u00e9ducation, la formation ou l'edtech",
+        "special": 0
+    },
+    {
+        "tag": "CYBER",
+        "description": "Entreprise ax\u00e9e sur la cybers\u00e9curit\u00e9, la protection des donn\u00e9es ou l'intelligence artificielle",
+        "special": 0
+    },
+    {
+        "tag": "AERO",
+        "description": "Soci\u00e9t\u00e9 a\u00e9ronautique, spatiale ou de d\u00e9fense",
+        "special": 0
+    },
+    {
+        "tag": "MIN",
+        "description": "Entreprise mini\u00e8re ou sp\u00e9cialis\u00e9e dans l'extraction de ressources",
+        "special": 0
+    },
+    {
+        "tag": "TELECOM",
+        "description": "Op\u00e9rateur ou fournisseur de services de t\u00e9l\u00e9communications",
+        "special": 0
+    },
+    {
+        "tag": "B2B",
+        "description": "Soci\u00e9t\u00e9 orient\u00e9e vers les services ou produits pour les entreprises",
+        "special": 0
+    },
+    {
+        "tag": "B2C",
+        "description": "Soci\u00e9t\u00e9 orient\u00e9e vers les services ou produits pour les consommateurs finaux",
+        "special": 0
+    },
+    {
+        "tag": "STARTUP",
+        "description": "Jeune entreprise innovante ou en phase de d\u00e9veloppement rapide",
+        "special": 0
+    },
+    {
+        "tag": "BLUECHIP",
+        "description": "Grande entreprise r\u00e9put\u00e9e pour sa solidit\u00e9 financi\u00e8re et sa notori\u00e9t\u00e9",
+        "special": 0
+    },
+    {
+        "tag": "FMCG",
+        "description": "Soci\u00e9t\u00e9 de biens de consommation \u00e0 rotation rapide (Fast-Moving Consumer Goods)",
+        "special": 0
+    },
+    {
+        "tag": "AI",
+        "description": "Entreprise sp\u00e9cialis\u00e9e dans l'intelligence artificielle ou le machine learning",
+        "special": 0
+    },
+    {
+        "tag": "CLOUD",
+        "description": "Soci\u00e9t\u00e9 ax\u00e9e sur les services cloud, le stockage ou l'informatique d\u00e9mat\u00e9rialis\u00e9e",
+        "special": 0
+    },
+    {
+        "tag": "FINT",
+        "description": "Entreprise de fintech (technologie financi\u00e8re, paiements, blockchain)",
+        "special": 0
+    },
+    {
+        "tag": "GREEN",
+        "description": "Soci\u00e9t\u00e9 engag\u00e9e dans les \u00e9nergies vertes ou la transition \u00e9cologique",
+        "special": 0
+    },
+    {
+        "tag": "DISLIKED",
+        "description": "Entreprise que l'utilisateur n'aime pas ou consid\u00e8re comme risqu\u00e9e",
+        "special": 1
+    },
+    {
+        "tag": "LIKED",
+        "description": "Entreprise que l'utilisateur appr\u00e9cie ou consid\u00e8re comme prometteuse",
+        "special": 1
+    },
+    {
+        "tag": "NEUTRAL",
+        "description": "Entreprise pour laquelle l'utilisateur n'a pas d'opinion forte",
+        "special": 1
+    },
+    {
+        "tag": "WATCHLIST",
+        "description": "Entreprise que l'utilisateur surveille de pr\u00e8s pour une \u00e9ventuelle future action",
+        "special": 1
+    },
+    {
+        "tag": "PORTFOLIO",
+        "description": "Entreprise d\u00e9j\u00e0 pr\u00e9sente dans le portefeuille de l'utilisateur",
+        "special": 1
+    },
+    {
+        "tag": "AVOID",
+        "description": "Entreprise que l'utilisateur souhaite \u00e9viter pour des raisons \u00e9thiques, environnementales ou autres",
+        "special": 1
+    },
+    {
+        "tag": "FAVORITE",
+        "description": "Entreprise pr\u00e9f\u00e9r\u00e9e de l'utilisateur, qu'il suit r\u00e9guli\u00e8rement et appr\u00e9cie particuli\u00e8rement",
+        "special": 1
+    }
 ]

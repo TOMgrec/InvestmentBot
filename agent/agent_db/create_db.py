@@ -6,43 +6,41 @@ import pandas as pd
 
 SP500_DATA = "database/sp500-companies.csv"
 
+industry_to_tag = {
+    "Health Care": "SANTE",
+    "Industrials": "INDUS",
+    "Information Technology": "TECH",
+    "Financials": "FIN",
+    "Consumer Staples": "CONSO",
+    "Consumer Discretionary": "CONSO",
+    "Energy": "ENERG",
+    "Utilities": "UTIL",
+    "Real Estate": "IMMO",
+    "Materials": "MAT",
+    "Communication Services": "COM",
+}
+
+sub_industry_to_tag = {
+    "Pharmaceuticals": "SANTE",
+    "Biotechnology": "SANTE",
+    "Software": "TECH",
+    "IT Services": "TECH",
+    "Banks": "FIN",
+    "Insurance": "FIN",
+    "Automobiles": "AUTO",
+    "Retailing": "RETAIL",
+    "Oil & Gas": "ENERG",
+    "Aerospace & Defense": "AERO",
+    "Industrial Conglomerates": "DIV",
+    "Luxury Goods": "LUXE",
+    "Cloud Computing": "CLOUD",
+    "Semiconductors": "TECH",
+    "Telecommunication Services": "TELECOM",
+}
+
 def assign_tags_simple(row):
     industry = row['Industry']
     sub_industry = row['Sub-Industry']
-
-    # Dictionnaire de correspondance Industry -> Tag
-    industry_to_tag = {
-        "Health Care": "SANTE",
-        "Industrials": "INDUS",
-        "Information Technology": "TECH",
-        "Financials": "FIN",
-        "Consumer Staples": "CONSO",
-        "Consumer Discretionary": "CONSO",
-        "Energy": "ENERG",
-        "Utilities": "UTIL",
-        "Real Estate": "IMMO",
-        "Materials": "MAT",
-        "Communication Services": "COM",
-    }
-
-    # Dictionnaire de correspondance Sub-Industry -> Tag
-    sub_industry_to_tag = {
-        "Pharmaceuticals": "SANTE",
-        "Biotechnology": "SANTE",
-        "Software": "TECH",
-        "IT Services": "TECH",
-        "Banks": "FIN",
-        "Insurance": "FIN",
-        "Automobiles": "AUTO",
-        "Retailing": "RETAIL",
-        "Oil & Gas": "ENERG",
-        "Aerospace & Defense": "AERO",
-        "Industrial Conglomerates": "DIV",
-        "Luxury Goods": "LUXE",
-        "Cloud Computing": "CLOUD",
-        "Semiconductors": "TECH",
-        "Telecommunication Services": "TELECOM",
-    }
 
     tags = set()
 
@@ -71,7 +69,7 @@ def create_db():
             stock_data=(
                 row['Ticker'], 
                 row['Name'], 
-                row['Industry'], 
+                industry_to_tag[row['Industry']], 
                 3,  # rating
                 row['description']   # description
             ),
